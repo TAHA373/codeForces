@@ -1,31 +1,29 @@
+/***** Mapping concept *****/
 #include <iostream>
-#include <stack>
+#include <vector>
 using namespace std;
-
 int main()
 {
     int n;
-    int num;
-    stack<int> n_snack;
-    int  i = -1;
     cin >> n;
+
+    int frequency_array[n + 1];
+    for (int i = 1; i < n + 1; i++)
+        frequency_array[i] = 0;
+    int curr;
+    curr = n;
+    int  i = -1;
+
     while (++i < n)
     {
+        int num;
         cin >> num;
-        n_snack.push(num);
+        frequency_array[num] = 1;
+        while (frequency_array[curr] == 1)
+        {
+            cout << curr << " ";
+            curr--;
+        }
+        cout << "\n";
     }
-    i = -1;
-    // while (++i < n)
-    // {
-    //     if (n_snack[i] == n_snack[i + 1])
-    //         n_snack.
-    // }
-    // i = -1;
-    while (!n_snack.empty())
-    {
-        cout << n_snack.top() << " "; 
-        n_snack.pop();
-    }
-    
-    
 }
