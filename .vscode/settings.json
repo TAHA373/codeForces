@@ -4,6 +4,8 @@
         "iostream": "cpp",
         "__bit_reference": "cpp",
         "algorithm": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "chrono": "cpp",
+        "complex": "cpp"
     }
 }
